@@ -1,0 +1,69 @@
+.newtodo {
+  display: none;
+  position: absolute;
+  padding-block-start: 48px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.newtodo__calendar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.newtodo__title {
+  text-align: center;
+}
+
+input[type='checkbox'].newtodo__inall {
+  display: none;
+}
+
+label.newtodo__inall {
+  cursor: pointer;
+  user-select: none;
+  height: 2rem;
+  padding-inline: 1rem;
+  margin-block-end: 2rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 0.3rem var(--color-shadow);
+}
+
+input[type='checkbox']:checked + label.newtodo__inall {
+  box-shadow: 0 0 0 0.3rem var(--color-one);
+}
+
+.newtodo__days {
+  display: flex;
+  gap: 1rem;
+}
+
+.newtodo__days input[type='checkbox'] {
+  display: none;
+}
+
+label.newtodo__day {
+  cursor: pointer;
+  user-select: none;
+  width: 2rem;
+  height: 2rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.3rem var(--color-shadow);
+}
+
+.newtodo__days input[type='checkbox']:checked + label.newtodo__day {
+  box-shadow: 0 0 0 0.3rem var(--color-one);
+}
+
+.newtodo--show {
+  display: initial;
+}
